@@ -1,5 +1,5 @@
 import React from "react";
-// import Nav from "./components/Nav";
+import Nav from "./components/Nav";
 import Work from "./components/Work";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -12,10 +12,10 @@ function App () {
   render (
     <BrowserRouter>
       <Routes>
-          <Route exact path="/" element={<Home />}></Route>
-          <Route exact path="/about" element={<About />}></Route>
-          <Route exact path="/work" element={<Work />}></Route>
-          <Route exact path="/contact" element={<Contact />}></Route>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/about" element={<About/>} />
+        <Route exact path="/work" element={<Work />} />
+        <Route exact path="/contact" element={<Contact />} />
       </Routes>
   </BrowserRouter>,
   rootElement
@@ -24,6 +24,7 @@ function App () {
 
 const Home = () => (
   <div>
+    <Nav />
     <h1>Welcome to my site!</h1>
   </div>
 );
