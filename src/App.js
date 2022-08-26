@@ -3,20 +3,25 @@ import Nav from "./components/Nav";
 import Work from "./components/Work";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import { render } from "react-dom";
+import './index.css';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
+const rootElement = document.getElementById("root");
 function App () {
-  return (
-    <Router>
-      <div className="App">
-        <Nav />
-        <Route path="/" exact component={Home}/>
-        <Route path="/about" exact component={About}/>
-        <Route path="/work" exact component={Work}/>
-        <Route path="/contact" exact component={Contact}/>
-      </div>
-    </Router>
-  
+  render (
+    <BrowserRouter>
+      <Routes>
+        <div className="App">
+          <Nav />
+          <Route path="/" exact component={Home}/>
+          <Route path="/about" exact component={About}/>
+          <Route path="/work" exact component={Work}/>
+          <Route path="/contact" exact component={Contact}/>
+        </div>
+      </Routes>
+  </BrowserRouter>,
+  rootElement
   );
 };
 
