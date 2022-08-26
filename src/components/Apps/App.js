@@ -1,38 +1,18 @@
 import './App.css';
+import apps from './applications.json';
 
 const Apps = () => 
 
 <div className='apps'>
-    <div className='app'>
-        <img src="https://picsum.photos/200/200" alt='app1' />
-        <h2>App1</h2>
-        <h4>Description: this is my description of the app</h4>
-    </div>
-
-    <div className='app'>
-        <img src="https://picsum.photos/200/200" alt='app1' />
-        <h2>App1</h2>
-        <h4>Description: this is my description of the app</h4>
-    </div>
-
-    <div className='app'>
-        <img src="https://picsum.photos/200/200" alt='app1' />
-        <h2>App1</h2>
-        <h4>Description: this is my description of the app</h4>
-    </div>
-
-    <div className='app'>
-        <img src="https://picsum.photos/200/200" alt='app1' />
-        <h2>App1</h2>
-        <h4>Description: this is my description of the app</h4>
-    </div>
-
-    <div className='app'>
-        <img src="https://picsum.photos/200/200" alt='app1' />
-        <h2>App1</h2>
-        <h4>Description: this is my description of the app</h4>
-    </div>
-
+    {apps.map(app => 
+        <div key={app.key} className='app'>
+            <img src={app.image} alt='app1' />
+            <div>
+                <h2>{app.name}</h2>
+                <h4>Description: { app.description } </h4>
+            </div>
+        </div>
+    )}
 </div>
 
 export default Apps;

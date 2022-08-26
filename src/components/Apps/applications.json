@@ -1,26 +1,31 @@
 [
     {
-        "App":"App1",
+        "key":1,
+        "name":"App1",
         "image": "https://picsum.photos/200/200",
         "description": "this is my description of the app"
     },
     {
-        "App":"App2",
+        "key":2,
+        "name":"App2",
         "image": "https://picsum.photos/200/200",
         "description": "this is my description of the app"
     },
     {
-        "App":"App3",
+        "key":3,
+        "name":"App3",
         "image": "https://picsum.photos/200/200",
         "description": "this is my description of the app"
     },
     {
-        "App":"App4",
+        "key":4,
+        "name":"App4",
         "image": "https://picsum.photos/200/200",
         "description": "this is my description of the app"
     },
     {
-        "App":"App5",
+        "key":5,
+        "name":"App5",
         "image": "https://picsum.photos/200/200",
         "description": "this is my description of the app"
     }
