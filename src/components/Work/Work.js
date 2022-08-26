@@ -1,11 +1,11 @@
-import './App.css';
+import './Work.css';
 import apps from './applications.json';
 
-const Apps = () => 
+const Work = () => 
 
 <div className='apps'>
     {apps.map(app => 
-        <div key={app.key} className='app'>
+        <div key={app.key} className='work'>
             <img src={app.image} alt='app1' />
             <div>
                 <h2>{app.name}</h2>
@@ -15,4 +15,4 @@ const Apps = () =>
     )}
 </div>
 
-export default Apps;
+export default Work;

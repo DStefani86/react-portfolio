@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import Nav from "./components/Nav";
-import Apps from "./components/Apps";
+import Work from "./components/Work";
 import About from "./components/About";
+import Contact from "./components/Contact";
 
 const App = () => {
-  const [getPage, setPage] = useState("apps");
+  const [getPage, setPage] = useState("about");
 
   const showPage = page => 
     page === 'about' 
       ? <About /> 
-      : page === 'apps' 
-      ? <Apps /> 
+      : page === 'work' 
+      ? <Work /> 
+      : page === 'contact'
+      ? <Contact />
       : '';
 
   return (
@@ -24,4 +27,3 @@ const App = () => {
 };
 
 export default App;
-
