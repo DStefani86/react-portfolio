@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "./components/Nav";
+// import Nav from "./components/Nav";
 import Work from "./components/Work";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -12,13 +12,10 @@ function App () {
   render (
     <BrowserRouter>
       <Routes>
-        <div className="App">
-          <Nav />
-          <Route path="/" exact component={Home}/>
-          <Route path="/about" exact component={About}/>
-          <Route path="/work" exact component={Work}/>
-          <Route path="/contact" exact component={Contact}/>
-        </div>
+          <Route exact path="/" element={<Home />}></Route>
+          <Route exact path="/about" element={<About />}></Route>
+          <Route exact path="/work" element={<Work />}></Route>
+          <Route exact path="/contact" element={<Contact />}></Route>
       </Routes>
   </BrowserRouter>,
   rootElement
